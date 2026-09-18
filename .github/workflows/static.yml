@@ -2,7 +2,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ["main", "week-02"]
+    branches: ["week-02", "main"]
   workflow_dispatch:
 
 permissions:
@@ -30,7 +30,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./profile-card
+          path: './profile-card'
 
       - name: Deploy to GitHub Pages
         id: deployment
