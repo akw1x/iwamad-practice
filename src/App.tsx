@@ -1,32 +1,28 @@
-import { Header } from './components/Header';
-import { ProfileCard } from './components/ProfileCard';
-import { Footer } from './components/Footer';
+import { Routes, Route } from 'react-router';
+import { Layout } from './components/Layout';
+import { HomePage } from './pages/HomePage';
+import { SkillsPage } from './pages/SkillsPage';
+import { ContactPage } from './pages/ContactPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 import './style.css';
 
 export function App() {
   const mySkills = [
     { id: 1, name: 'HTML / CSS' },
-    { id: 2, name: 'JavaScript' },
+    { id: 2, name: 'Java' },
     { id: 3, name: 'Python' },
     { id: 4, name: 'C++' }
   ];
 
   return (
-    <div className="app">
-      <Header title="User Profile" />
-      <main>
-        <ProfileCard
-          name="Adel"
-          role="3rd Year Student"
-          description="3rd-year student learning the basics of web development."
-          avatarUrl="./IMG_3804.JPG"
-          email="a_kikbay@kbtu.kz"
-          githubUrl="https://github.com/akw1x"
-          skills={mySkills}
-        />
-      </main>
-      <Footer text="© 2026 Adel" />
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<HomePage skills={mySkills} />} />
+        <Route path="skills" element={<SkillsPage skills={mySkills} />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
 
