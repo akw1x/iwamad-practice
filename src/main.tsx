@@ -4,9 +4,13 @@ import { BrowserRouter } from 'react-router'
 import { LikesProvider } from './context/LikesContext'
 import App from './App'
 
+import './styles/token.css'
+import './styles/ui.css'
+import './style.css'
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename="/iwamad-practice/">
       <LikesProvider>
         <App />
       </LikesProvider>
