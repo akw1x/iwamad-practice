@@ -3,9 +3,10 @@ import { Card } from './ui/Card';
 import { Tag } from './ui/Tag';
 import { Button } from './ui/Button';
 
-type Skill = {
-  id: number;
+export type Skill = {
+  id: number | string;
   name: string;
+  level?: string;
 };
 
 type ProfileCardProps = {
