@@ -16,7 +16,7 @@ export function HomePage({ skills }: HomePageProps) {
         name="Adel"
         role="3rd Year Student"
         description="3rd-year student learning the basics of web development."
-        avatarUrl="public/IMG_3804.JPG"
+        avatarUrl="/IMG_3804.JPG"
         email="a_kikbay@kbtu.kz"
         githubUrl="https://github.com"
         skills={skills}
