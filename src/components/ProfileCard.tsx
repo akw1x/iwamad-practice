@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Card } from './ui/Card';
 import { Tag } from './ui/Tag';
 
@@ -18,12 +17,6 @@ type ProfileCardProps = {
 };
 
 export function ProfileCard(props: ProfileCardProps) {
-  const [likes, setLikes] = useState(0);
-
-  function handleLike() {
-    setLikes(likes + 1);
-  }
-
   return (
     <Card>
       <div className="profile-card" style={{ border: 'none', padding: 0 }}>
@@ -52,10 +45,6 @@ export function ProfileCard(props: ProfileCardProps) {
             GitHub
           </a>
         </div>
-
-        <button onClick={handleLike} className="btn btn-primary">
-          ❤️ Likes: {likes}
-        </button>
       </div>
     </Card>
   );
