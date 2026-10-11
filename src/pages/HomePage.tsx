@@ -1,5 +1,4 @@
 import { ProfileCard } from '../components/ProfileCard'
-import { LikeButton } from '../components/LikeButton'
 
 type Skill = {
   id: number
@@ -17,13 +16,11 @@ export function HomePage({ skills }: HomePageProps) {
         name="Adel"
         role="3rd Year Student"
         description="3rd-year student learning the basics of web development."
-        avatarUrl="public/IMG_3804.JPG"
+        avatarUrl="/Users/adelkikbai/iwamad-practice/public/IMG_3804.JPG"
         email="a_kikbay@kbtu.kz"
         githubUrl="https://github.com"
         skills={skills}
       />
-      
-      <LikeButton />
     </div>
   )
 }
