@@ -5,7 +5,6 @@ import { LikesProvider } from './context/LikesContext'
 import App from './App'
 
 import './styles/tokens.css'
-import './styles/style.css'
 import './styles/ui.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
