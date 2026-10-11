@@ -4,9 +4,9 @@ import { BrowserRouter } from 'react-router'
 import { LikesProvider } from './context/LikesContext'
 import App from './App'
 
-import './styles/token.css'
-import './styles/ui.css'
+import './styles/tokens.css'
 import './style.css'
+import './styles/ui.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

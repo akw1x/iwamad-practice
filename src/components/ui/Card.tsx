@@ -1,5 +1,9 @@
-import { ReactNode } from 'react'
+import React, { HTMLAttributes } from 'react';
 
-export function Card({ children }: { children: ReactNode }) {
-  return <article className="card">{children}</article>
-}
+export const Card: React.FC<HTMLAttributes<HTMLElement>> = ({ children, className = '', ...props }) => {
+  return (
+    <article className={`card ${className}`.trim()} {...props}>
+      {children}
+    </article>
+  );
+};

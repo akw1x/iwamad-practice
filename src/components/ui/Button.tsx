@@ -1,13 +1,22 @@
-import { ButtonHTMLAttributes } from 'react'
+import React, { ButtonHTMLAttributes } from 'react';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'primary' | 'secondary'
-}
+  variant?: 'primary' | 'secondary' | 'ghost';
+};
 
-export function Button({ variant = 'primary', className = '', children, ...props }: ButtonProps) {
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = 'primary',
+  className = '',
+  ...props
+}) => {
   return (
-    <button type="button" className={`btn btn-${variant} ${className}`} {...props}>
+    <button
+      type="button"
+      className={`btn btn--${variant} ${className}`.trim()}
+      {...props}
+    >
       {children}
     </button>
-  )
-}
+  );
+};

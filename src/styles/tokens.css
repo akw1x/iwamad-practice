@@ -1,12 +1,17 @@
 :root {
+    /* Colors */
     --color-primary: #1D4ED8;
     --color-on-primary: #FFFFFF;
     --color-text: #1F2937;
-    --color-text-muted: #4B5563;
+    --color-text-muted: #4B5563; 
     --color-surface: #FFFFFF;
     --color-border: #D1D5DB;
+  
+    /* Spaces */
     --space-2: 8px;
     --space-4: 16px;
     --space-6: 24px;
+  
+    /* Radius */
     --radius-md: 8px;
   }
