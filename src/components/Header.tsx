@@ -29,6 +29,9 @@ export function Header(props: HeaderProps) {
         <NavLink to="/register" className={({ isActive }) => (isActive ? 'active-link' : '')}>
           Register
         </NavLink>
+        <NavLink to="/events" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          Events
+        </NavLink>
       </nav>
 
       <div className="header-likes" style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
